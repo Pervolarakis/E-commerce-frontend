@@ -48,10 +48,10 @@ class Profile extends Component{
                 <p style={{fontSize: 20, margin: "auto", color: "#e91e63"}}>{this.props.user}</p>
                 
                 <NavDropdown title={<Image style={{width: 40, height: 40, marginRight: 20}} src={this.state.img} roundedCircle />} id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
+                    <NavDropdown.Item as={NavLink} to="/profile">Profile</NavDropdown.Item>
                     <NavDropdown.Item as={NavLink} to="/settings">Settings</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4" onClick={this.props.logout}>Logout</NavDropdown.Item>
+                    <NavDropdown.Item onClick={this.props.logout}>Logout</NavDropdown.Item>
                 </NavDropdown>
                 
                 

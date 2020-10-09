@@ -8,6 +8,7 @@ import ProductView from './Body/ProductView'
 import Login from './Head/Login'
 import Settings from './Body/Settings'
 import EditModal from './Body/EditModal';
+import Profile from './Body/Profile'
 
 import {connect} from 'react-redux';
 
@@ -20,6 +21,7 @@ class Layout extends Component{
             <Route exact path="/login" component={Login}/>
             <Route exact path="/product/:productid" component={ProductView}/>
             
+            
             <Redirect to="/products/all/new/1"/>
         </Switch>)
 
@@ -29,6 +31,7 @@ class Layout extends Component{
                     <Route exact path="/products/:category/:sortby/:page" component={Body}/>
                     <Route exact path="/settings" component={Settings}/>
                     <Route exact path="/newad" component={NewProduct}/>
+                    <Route exact path="/profile" component={Profile}/>
                     <Route exact path="/product/:productid/edit" component={EditModal}/>
                     <Route exact path="/product/:productid" component={ProductView}/>
                     <Redirect to="/products/all/new/1"/>
