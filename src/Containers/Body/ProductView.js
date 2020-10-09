@@ -6,8 +6,7 @@ import {connect} from 'react-redux';
 import ProfileModal from '../../Components/ProfileModal'
 import * as colors from '../../Colors'
 import DeleteModal from './DeleteModal'
-import {Redirect} from 'react-router-dom';
-import EditModal from './EditModal';
+import {Redirect, NavLink} from 'react-router-dom';
 
 class ProductView extends Component{
 
@@ -55,7 +54,7 @@ class ProductView extends Component{
             controls=(
             <div style={{alignSelf: "flex-end"}}>
                 <TrashFill color={colors.headerColor} size={25} style={{marginRight: 10}} onClick={()=>this.setState({togleDelete: true})}/>
-                <PencilFill color={colors.headerColor} size={25}/>
+                <NavLink to={`/product/${this.state.product}/edit`} ><PencilFill color={colors.headerColor} size={25}/></NavLink>
             </div>)
         }
 

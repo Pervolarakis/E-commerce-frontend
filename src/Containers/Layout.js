@@ -18,7 +18,6 @@ class Layout extends Component{
             <Route exact path="/products/:category/:sortby/:page" component={Body}/>
             <Route exact path="/register" component={Register}/>
             <Route exact path="/login" component={Login}/>
-            <Route exact path="/product/:productid/edit" component={EditModal}/>
             <Route exact path="/product/:productid" component={ProductView}/>
             
             <Redirect to="/products/all/new/1"/>
@@ -30,6 +29,7 @@ class Layout extends Component{
                     <Route exact path="/products/:category/:sortby/:page" component={Body}/>
                     <Route exact path="/settings" component={Settings}/>
                     <Route exact path="/newad" component={NewProduct}/>
+                    <Route exact path="/product/:productid/edit" component={EditModal}/>
                     <Route exact path="/product/:productid" component={ProductView}/>
                     <Redirect to="/products/all/new/1"/>
                 </Switch>

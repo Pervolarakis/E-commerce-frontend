@@ -29,7 +29,7 @@ class List extends Component{
             axios.get(`http://localhost:5000/api/v1/products${category}page=${this.state.activePage}?sort=${this.state.sortBy}`)
                 .then(async(res)=>{
                     await this.setState({data: res.data.data, pages: res.data.pages, loaded: true, activePage: this.props.match.params.page, sortBy: this.props.match.params.sortby})
-                    console.log(res.data.data)
+                    
                     
                 })
                 .catch((err)=>console.log(err))
